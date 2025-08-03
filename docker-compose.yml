@@ -1,0 +1,9 @@
+version: '3'
+services:
+  ai-log-analyzer:
+    build: .
+    container_name: ai-log-analyzer
+    env_file: .env
+    volumes:
+      - .:/app
+    command: ["python", "ai_log_analyzer/scheduler.py"]
